@@ -30,11 +30,11 @@
     </div>
     <script>
         function sum(){
-            var txtFirstNumberValue = document.getElementById('jumlah_anak_kelas').value;
-            var txtSecondNumberValue = document.getElementById('jumlah_anak_rumah').value;
-            var txtThreeNumberValue  = document.getElementById('jumlah_jenis_makanan').value;
+            var jumlahAnakKelas = document.getElementById('jumlah_anak_kelas').value;
+            var jumlahAnakRumah = document.getElementById('jumlah_anak_rumah').value;
+            var jumlahJenisMakanan  = document.getElementById('jumlah_jenis_makanan').value;
         
-            var result = (parseInt(txtFirstNumberValue)  + parseInt(txtSecondNumberValue)) * parseInt(txtThreeNumberValue);
+            var result = (parseInt(jumlahAnakKelas)  + parseInt(jumlahAnakRumah)) * parseInt(jumlahJenisMakanan);
             if (!isNaN(result)) {
                 document.getElementById('total').value = result;
             }
