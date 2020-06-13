@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script> 
+    
+
+</head>
+<body>
+    <h2 style="text-align:center;   ">Uprak ULTAH RINA </h2>
+    <div class="container" style="margin-left:500; margin-top:100px" >
+        <form action="tambah_data.php" method="POST">
+
+            <label for="nama_pembuat_acara">Nama Pembuat Acara : </label><br>
+            <input type="text" name="nama_pmbuat_acara" id="nama_pmbuat_acara"  size="70"> <br><br> 
+            <label for="jumlah_anak_kelas">Jumlah Anak Kelas : </label> <br>
+            <input type="text" id="jumlah_anak_kelas" name="jumlah_anak_kelas" onkeyup="sum();"   size="70"/> <br> + <br>
+            <label for="jumah_anak_rumah">Jumlah Anak Rumah : </label><br>
+            <input type="text" id="jumlah_anak_rumah"  name="jumlah_anak_rumah" onkeyup="sum();"  size="70"  /> <br> * <br>
+            <label for="jumlah_jenis_makanan">Jumlah Jenis Makanan</label><br>
+            <input type="text" id="jumlah_jenis_makanan" name="jumlah_jenis_makanan" onkeyup="sum();" size="70"> <br> =  <br>
+            <label for="total">Total Biaya : </label> <br>
+            <input type="text" id="total" name="total" size="70"/>
+            <br> <br>
+            <button type="submit" name="btnSubmit">Kirim Data</button>
+            
+            
+        </form>
+    </div>
+    <script>
+        function sum(){
+            var txtFirstNumberValue = document.getElementById('jumlah_anak_kelas').value;
+            var txtSecondNumberValue = document.getElementById('jumlah_anak_rumah').value;
+            var txtThreeNumberValue  = document.getElementById('jumlah_jenis_makanan').value;
+        
+            var result = (parseInt(txtFirstNumberValue)  + parseInt(txtSecondNumberValue)) * parseInt(txtThreeNumberValue);
+            if (!isNaN(result)) {
+                document.getElementById('total').value = result;
+            }
+        }
+    </script>
+    
+   
+</body>
+</html>
